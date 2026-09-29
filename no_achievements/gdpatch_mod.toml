@@ -1,0 +1,18 @@
+id = "no_achievements"
+
+[meta]
+name = "No Achievements"
+version = "1.0.0"
+authors = ["letruxux"]
+description = "Disables achievements and stats"
+website = "https://github.com/letruxux/avs03-mods"
+
+[config.disable.achievements]
+name = "Disable Achievements"
+default = true
+type = "boolean"
+
+[config.disable.stats]
+name = "Disable Stats"
+default = true
+type = "boolean"

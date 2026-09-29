@@ -1,0 +1,82 @@
+id = "unlocker"
+
+[meta]
+name = "Unlocker"
+version = "1.0.0"
+authors = ["letruxux"]
+description = "Unlock everything you want"
+
+[config.unlocks.themes]
+name = "Unlock all Themes"
+default = false
+type = "boolean"
+
+[config.unlocks.cursors]
+name = "Unlock all Cursors"
+default = false
+type = "boolean"
+
+[config.unlocks.weapons]
+name = "Unlock all Weapons"
+default = false
+type = "boolean"
+
+[config.unlocks.plugins]
+name = "Unlock all Plugins"
+default = false
+type = "boolean"
+
+[config.unlocks.upgrades]
+name = "Unlock all Upgrades"
+default = false
+type = "boolean"
+
+[config.unlocks.protocols]
+name = "Unlock all Protocols"
+default = false
+type = "boolean"
+
+[config.unlocks.widgets]
+name = "Unlock all Widgets"
+default = false
+type = "boolean"
+
+[config.unlocks.skulls]
+name = "Unlock all Skulls"
+default = false
+type = "boolean"
+
+[config.unlocks.general]
+name = "Unlock all General"
+default = false
+type = "boolean"
+
+[config.unlocks.drivers]
+name = "Unlock all Drivers"
+default = false
+type = "boolean"
+
+[config.unlocks.avatars]
+name = "Unlock all Avatars"
+default = false
+type = "boolean"
+
+[config.unlocks.wallpapers]
+name = "Unlock all Wallpapers"
+default = false
+type = "boolean"
+
+[config.unlocks.safe_files]
+name = "Unlock all Safe Files"
+default = false
+type = "boolean"
+
+[config.unlocks.battle_files]
+name = "Unlock all Battle Files"
+default = false
+type = "boolean"
+
+[config.unlocks.bosses]
+name = "Unlock all Bosses"
+default = false
+type = "boolean"
