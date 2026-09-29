@@ -1,0 +1,8 @@
+id = "themelib"
+
+[meta]
+name = "ThemeLib"
+version = "1.0.0"
+authors = ["letruxux"]
+description = "easily add more themes (library)"
+website = "https://github.com/letruxux/avs03-mods"

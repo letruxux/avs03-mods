@@ -1,0 +1,119 @@
+[gd_resource type="Resource" script_class="ThemeDefinition" format=3 uid="uid://ummm_custom_theme_yay"]
+
+[ext_resource type="Texture2D" uid="uid://c7d1k1i02xyb5" path="res://assets/themes/classic/buttons/disabled.png" id="1"]
+[ext_resource type="Texture2D" uid="uid://dbfuh70gfw0n7" path="res://assets/themes/classic/buttons/hover.png" id="2"]
+[ext_resource type="Texture2D" uid="uid://cb5ywr0wuju6k" path="res://assets/themes/classic/buttons/normal.png" id="3"]
+[ext_resource type="Texture2D" uid="uid://bny1epjw06kp3" path="res://assets/themes/classic/buttons/pressed.png" id="4"]
+[ext_resource type="Texture2D" uid="uid://d320wemkbfcl1" path="res://assets/themes/classic/checkbox_checked.png" id="5"]
+[ext_resource type="Texture2D" uid="uid://c05nothfi2eou" path="res://assets/themes/classic/checkbox_disabled.png" id="6"]
+[ext_resource type="Texture2D" uid="uid://cavmtjjemole4" path="res://assets/themes/classic/checkbox_large_checked.png" id="7"]
+[ext_resource type="Texture2D" uid="uid://bvkwgixcypv7m" path="res://assets/themes/classic/checkbox_large_unchecked.png" id="8"]
+[ext_resource type="Texture2D" uid="uid://ccd3ruekl3po6" path="res://assets/themes/classic/checkbox_unchecked.png" id="9"]
+[ext_resource type="Resource" uid="uid://5r4ljfcw57nq" path="res://resources/themes/classic_chrome_default.tres" id="10"]
+[ext_resource type="Texture2D" uid="uid://be450w2kavuxk" path="res://assets/themes/classic/clock_bg.png" id="11"]
+[ext_resource type="Texture2D" uid="uid://dqnsvxi2ot0u7" path="res://assets/themes/classic/div_land.png" id="12"]
+[ext_resource type="Texture2D" uid="uid://6kfyuwbkkwnp" path="res://assets/themes/classic/div_vert.png" id="13"]
+[ext_resource type="Texture2D" uid="uid://eysim5gi6sqb" path="res://assets/themes/classic/gradient_panel.png" id="14"]
+[ext_resource type="Texture2D" uid="uid://c3vqm5inpj26u" path="res://assets/themes/classic/pause_panel.png" id="15"]
+[ext_resource type="Texture2D" uid="uid://ulp52ij4f82b" path="res://assets/themes/classic/profile_frame.png" id="16"]
+[ext_resource type="Texture2D" uid="uid://b2lqnulaxs0x7" path="res://assets/themes/classic/progress_bg.png" id="17"]
+[ext_resource type="Texture2D" uid="uid://bsija06pethbu" path="res://assets/themes/classic/progress_fill.png" id="18"]
+[ext_resource type="Texture2D" uid="uid://ljxu5vtcpoxv" path="res://assets/themes/classic/progress_fill_blue.png" id="19"]
+[ext_resource type="Texture2D" uid="uid://cerwweuwebrus" path="res://assets/themes/classic/progress_fill_green.png" id="20"]
+[ext_resource type="Texture2D" uid="uid://crdlg2xqo1l8j" path="res://assets/themes/classic/progress_fill_orange.png" id="21"]
+[ext_resource type="Texture2D" uid="uid://cohhe3f87prtu" path="res://assets/themes/classic/progress_fill_red.png" id="22"]
+[ext_resource type="Texture2D" uid="uid://cqlkxl6vq2ax" path="res://assets/themes/classic/progress_fill_yellow.png" id="23"]
+[ext_resource type="Texture2D" uid="uid://0fg0ps4g6jjn" path="res://assets/themes/classic/progress_well.png" id="24"]
+[ext_resource type="Texture2D" uid="uid://7ypn2f8s7vmr" path="res://assets/themes/classic/resize_grip.png" id="25"]
+[ext_resource type="Script" uid="uid://cbytg3jnmfg0f" path="res://resources/themes/theme_definition.gd" id="26"]
+[ext_resource type="Texture2D" uid="uid://bijrvnd3ycurb" path="res://assets/themes/classic/scroll_bg_hori.png" id="27"]
+[ext_resource type="Texture2D" uid="uid://cf8xbbc28rlcj" path="res://assets/themes/classic/scroll_bg_vert.png" id="28"]
+[ext_resource type="Texture2D" uid="uid://br7hxcv0441qr" path="res://assets/themes/classic/scroll_down.png" id="29"]
+[ext_resource type="Texture2D" uid="uid://bbsn7jc12cvp8" path="res://assets/themes/classic/scroll_grabber_hori.png" id="30"]
+[ext_resource type="Texture2D" uid="uid://dct6205ubam36" path="res://assets/themes/classic/scroll_grabber_vert.png" id="31"]
+[ext_resource type="Texture2D" uid="uid://d3iy7v8vpw3ri" path="res://assets/themes/classic/scroll_up.png" id="32"]
+[ext_resource type="Texture2D" uid="uid://c5mhqy6aqm7s7" path="res://assets/themes/classic/slider_grabber.png" id="33"]
+[ext_resource type="Texture2D" uid="uid://yyrtjiieyoco" path="res://assets/themes/classic/slider_track.png" id="34"]
+[ext_resource type="Texture2D" uid="uid://d5w4cg2v3yjt" path="res://assets/themes/classic/speech_bubble.png" id="35"]
+[ext_resource type="Texture2D" uid="uid://227b05odwcj6" path="res://assets/themes/classic/start_button.png" id="36"]
+[ext_resource type="Texture2D" uid="uid://b7rhyvhu6l8qm" path="res://assets/themes/classic/start_menu.png" id="37"]
+[ext_resource type="Texture2D" uid="uid://1ley2keatl07" path="res://assets/themes/classic/start_menu_button_hover.png" id="38"]
+[ext_resource type="Texture2D" uid="uid://1xvlt8dcb7tq" path="res://assets/themes/classic/start_menu_button_pressed.png" id="39"]
+[ext_resource type="Texture2D" uid="uid://imgev5lwq62d" path="res://assets/themes/classic/tabs/active.png" id="40"]
+[ext_resource type="Texture2D" uid="uid://cy3jg6i8nwapm" path="res://assets/themes/classic/tabs/disabled.png" id="41"]
+[ext_resource type="Texture2D" uid="uid://uf83ci5gvsth" path="res://assets/themes/classic/tabs/hover.png" id="42"]
+[ext_resource type="Texture2D" uid="uid://dy6cloxmdrdsg" path="res://assets/themes/classic/tabs/normal.png" id="43"]
+[ext_resource type="Texture2D" uid="uid://bxs3mic3mlktq" path="res://assets/themes/classic/tabs/pressed.png" id="44"]
+[ext_resource type="Texture2D" uid="uid://ox2h72gdi7qi" path="res://assets/themes/classic/taskbar.png" id="45"]
+[ext_resource type="Texture2D" uid="uid://cqa4uo57lqowo" path="res://assets/themes/classic/taskbar_button.png" id="46"]
+[ext_resource type="Texture2D" uid="uid://dqgykmihi1b66" path="res://assets/themes/classic/titlebar.png" id="47"]
+[ext_resource type="Texture2D" uid="uid://c2cfrt4ax1buo" path="res://assets/themes/classic/titlebar_close.png" id="48"]
+[ext_resource type="Texture2D" uid="uid://cr6oqhkr65eg1" path="res://assets/themes/classic/titlebar_max.png" id="49"]
+[ext_resource type="Texture2D" uid="uid://coe08vjleve03" path="res://assets/themes/classic/titlebar_min.png" id="50"]
+[ext_resource type="Texture2D" uid="uid://bkuejrxdxsfh2" path="res://assets/themes/classic/window_footer.png" id="51"]
+[ext_resource type="Texture2D" uid="uid://o820t1bhm6y6" path="res://assets/themes/classic/window_frame.png" id="52"]
+[ext_resource type="Texture2D" uid="uid://dj60m47y0l725" path="res://assets/themes/classic/window_frame_transparent.png" id="53"]
+
+[resource]
+script = ExtResource("26")
+id = "custom_theme"
+number = 9
+display_name = "Custom Theme :3"
+starter = false
+window_body_color = Color(0.78431374, 0.78431374, 0.78431374, 1)
+chrome_text_color = Color(0, 0, 0, 1)
+chrome_text_shadow_color = Color(0, 0, 0, 0)
+panel_border_color = Color(0.40392157, 0.40392157, 0.40392157, 1)
+group_title_color = Color(0, 0, 0, 1)
+window_frame = ExtResource("52")
+window_frame_transparent = ExtResource("53")
+taskbar = ExtResource("45")
+titlebar = ExtResource("47")
+window_footer = ExtResource("51")
+taskbar_button = ExtResource("46")
+start_menu = ExtResource("37")
+start_button = ExtResource("36")
+profile_frame = ExtResource("16")
+slider_track = ExtResource("34")
+slider_grabber = ExtResource("33")
+pause_panel = ExtResource("15")
+clock_bg = ExtResource("11")
+button_normal = ExtResource("3")
+button_hover = ExtResource("2")
+button_pressed = ExtResource("4")
+button_disabled = ExtResource("1")
+start_menu_button_hover = ExtResource("38")
+start_menu_button_pressed = ExtResource("39")
+tab_normal = ExtResource("43")
+tab_hover = ExtResource("42")
+tab_pressed = ExtResource("44")
+tab_active = ExtResource("40")
+tab_disabled = ExtResource("41")
+titlebar_min = ExtResource("50")
+titlebar_max = ExtResource("49")
+titlebar_close = ExtResource("48")
+div_land = ExtResource("12")
+div_vert = ExtResource("13")
+scroll_bg_hori = ExtResource("27")
+scroll_bg_vert = ExtResource("28")
+scroll_grabber_hori = ExtResource("30")
+scroll_grabber_vert = ExtResource("31")
+scroll_up = ExtResource("32")
+scroll_down = ExtResource("29")
+progress_bg = ExtResource("17")
+progress_well = ExtResource("24")
+progress_fill = ExtResource("18")
+progress_fill_blue = ExtResource("19")
+progress_fill_green = ExtResource("20")
+progress_fill_orange = ExtResource("21")
+progress_fill_red = ExtResource("22")
+progress_fill_yellow = ExtResource("23")
+checkbox_checked = ExtResource("5")
+checkbox_unchecked = ExtResource("9")
+checkbox_disabled = ExtResource("6")
+checkbox_large_checked = ExtResource("7")
+checkbox_large_unchecked = ExtResource("8")
+resize_grip = ExtResource("25")
+gradient_panel = ExtResource("14")
+speech_bubble = ExtResource("35")
+classic_chrome = ExtResource("10")
