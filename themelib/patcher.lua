@@ -104,6 +104,27 @@ const CUSTOM_WALLPAPERS_DIR: String = "res://assets/custom_wallpapers"]]
 	return src
 end
 
+GDPatch.patch_script_as_text("scenes/ui/main_menu.gdc", function(_ctx, src)
+	src = utils.replace(
+		src,
+		"func _ready() -> void :",
+		[[func _apply_wallpaper_stuff() -> void:
+	print(get_children())
+	var wallpaper: TextureRect = get_tree().get_root().get_node("MainMenu/DesktopCanvas/Desktop/Wallpaper")
+	if wallpaper == null:
+		return
+	print(wallpaper, wallpaper.expand_mode, wallpaper.stretch_mode)
+	wallpaper.stretch_mode = TextureRect.StretchMode.STRETCH_SCALE
+	wallpaper.expand_mode = TextureRect.ExpandMode.EXPAND_FIT_WIDTH
+
+func _ready() -> void :
+	_apply_wallpaper_stuff()]]
+	)
+
+	print(src)
+	return src
+end)
+
 GDPatch.patch_script_as_text("scenes/ui/personalise/personalise_menu.gdc", function(_ctx, src)
 	src = utils.replace(
 		src,
