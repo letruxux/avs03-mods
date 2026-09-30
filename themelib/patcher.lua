@@ -104,19 +104,7 @@ const CUSTOM_WALLPAPERS_DIR: String = "res://assets/custom_wallpapers"]]
 	return src
 end
 
-GDPatch.patch_script_as_text("scenes/ui/main_menu.gdc", function(ctx, src)
-	src = utils.replace(
-		src,
-		"func reveal_desktop() -> void :",
-		[[func reveal_desktop() -> void :
-	get_tree().get_current_scene().get_node("Wallpaper").stretch_mode = TextureRect.StretchMode.STRETCH_SCALE
-	get_tree().get_current_scene().get_node("Wallpaper").expand_mode = TextureRect.ExpandMode.EXPAND_FIT_WIDTH]]
-	)
-
-	return src
-end)
-
-GDPatch.patch_script_as_text("scenes/ui/personalise/personalise_menu.gdc", function(ctx, src)
+GDPatch.patch_script_as_text("scenes/ui/personalise/personalise_menu.gdc", function(_ctx, src)
 	src = utils.replace(
 		src,
 		"wallpaper_preview.texture = definition.texture",
@@ -130,7 +118,7 @@ end)
 
 --- um
 
-GDPatch.patch_script_as_text("scenes/autoload/appearance_manager.gdc", function(ctx, src)
+GDPatch.patch_script_as_text("scenes/autoload/appearance_manager.gdc", function(_ctx, src)
 	src = patch_themes(src)
 	src = patch_wallpapers(src)
 
