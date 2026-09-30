@@ -1,8 +1,0 @@
-id = "nicer_vapor"
-
-[meta]
-name = "Nicer Vapor"
-version = "1.0.0"
-authors = ["letruxux"]
-description = "vapor.exe only vaporizes enemies"
-website = "https://github.com/letruxux/avs03-mods"
