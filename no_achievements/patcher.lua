@@ -4,14 +4,10 @@ local function patch_steamworks(src)
 	src = src:gsub(
 		utils.escape("extends Node"),
 		utils.escape(
-			string.format(
 				[[extends Node
 			
-var achievements_enabled: bool = %s
-var stats_enabled: bool = %s]],
-				tostring(not GDPatch.get_config_option(nil, "disable", "achievements")),
-				tostring(not GDPatch.get_config_option(nil, "disable", "stats"))
-			),
+var achievements_enabled: bool = not GDPatch.get_config_option("no_achievements", "disable", "achievements")
+var stats_enabled: bool = not GDPatch.get_config_option("no_achievements", "disable", "stats")]]),
 			true
 		),
 		1
@@ -44,8 +40,7 @@ var stats_enabled: bool = %s]],
 		utils.escape(
 			[[func indicate_progress(api_name: String, current: int, maximum: int) -> bool:
 	if !achievements_enabled:
-		return false]],
-			true
+		return false]]
 		),
 		1
 	)
