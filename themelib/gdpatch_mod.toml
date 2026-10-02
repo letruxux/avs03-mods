@@ -6,3 +6,13 @@ version = "1.0.0"
 authors = ["letruxux"]
 description = "easily add more themes (library)"
 website = "https://github.com/letruxux/avs03-mods"
+
+[config.enable.wallpapers]
+name = "Enable Custom Wallpapers"
+default = true
+type = "boolean"
+
+[config.enable.themes]
+name = "Enable Custom Themes"
+default = true
+type = "boolean"

@@ -68,6 +68,8 @@ func _load_custom_wallpaper(path: String) -> Texture2D:
 		push_warning("Failed to load image: " + path)
 		return null
 
+	image.resize(768, 480, Image.INTERPOLATE_LANCZOS)
+
 	var texture: Texture2D = ImageTexture.create_from_image(image)
 	return texture
 
@@ -104,44 +106,29 @@ const CUSTOM_WALLPAPERS_DIR: String = "res://assets/custom_wallpapers"]]
 	return src
 end
 
-GDPatch.patch_script_as_text("scenes/ui/main_menu.gdc", function(_ctx, src)
-	src = utils.replace(
-		src,
-		"func _ready() -> void :",
-		[[func _apply_wallpaper_stuff() -> void:
-	print(get_children())
-	var wallpaper: TextureRect = get_tree().get_root().get_node("MainMenu/DesktopCanvas/Desktop/Wallpaper")
-	if wallpaper == null:
-		return
-	print(wallpaper, wallpaper.expand_mode, wallpaper.stretch_mode)
-	wallpaper.stretch_mode = TextureRect.StretchMode.STRETCH_SCALE
-	wallpaper.expand_mode = TextureRect.ExpandMode.EXPAND_FIT_WIDTH
-
-func _ready() -> void :
-	_apply_wallpaper_stuff()]]
-	)
-
-	print(src)
-	return src
-end)
-
-GDPatch.patch_script_as_text("scenes/ui/personalise/personalise_menu.gdc", function(_ctx, src)
-	src = utils.replace(
-		src,
-		"wallpaper_preview.texture = definition.texture",
-		[[wallpaper_preview.texture = definition.texture
+if GDPatch.get_config_option(nil, "enable", "wallpapers") then
+	GDPatch.patch_script_as_text("scenes/ui/personalise/personalise_menu.gdc", function(_ctx, src)
+		src = utils.replace(
+			src,
+			"wallpaper_preview.texture = definition.texture",
+			[[wallpaper_preview.texture = definition.texture
 	wallpaper_preview.stretch_mode = TextureRect.StretchMode.STRETCH_SCALE
 	wallpaper_preview.expand_mode = TextureRect.ExpandMode.EXPAND_FIT_WIDTH]]
-	)
+		)
 
-	return src
-end)
+		return src
+	end)
+end
 
 --- um
 
 GDPatch.patch_script_as_text("scenes/autoload/appearance_manager.gdc", function(_ctx, src)
-	src = patch_themes(src)
-	src = patch_wallpapers(src)
+	if GDPatch.get_config_option(nil, "enable", "themes") then
+		src = patch_themes(src)
+	end
+	if GDPatch.get_config_option(nil, "enable", "wallpapers") then
+		src = patch_wallpapers(src)
+	end
 
 	return src
 end)
