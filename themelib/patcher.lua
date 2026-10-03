@@ -1,7 +1,12 @@
 local utils = require("gdpatch.utils")
 
 function utils.replace(src, a, b)
-	src = src:gsub(utils.escape(a), function()
+	if not string.find(src, a, 1, true) then
+		print("!PATCH FAILED!: \n\n" .. a .. "\n\n" .. b .. "\n")
+		return src
+	end
+
+	src = string.gsub(src, utils.escape(a), function()
 		return b
 	end, 1)
 	return src
