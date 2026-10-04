@@ -17,15 +17,14 @@ GDPatch.patch_script_as_text("scenes/manager/round_manager/round_manager.gdc", f
 		src,
 		'const FRENZY: PackedScene = preload("uid://dw5vtdhpmgxr2")',
 		[[const FRENZY: PackedScene = preload("uid://dw5vtdhpmgxr2")
-@onready var CAMO: PackedScene = load("res://scenes/game_object/clickables/camo/camo.tscn")]]
+@onready var MOUNTAINVPN: PackedScene = load("res://scenes/game_object/clickables/mountainvpn/mountainvpn.tscn")]]
 	)
 
 	src = utils.replace(
 		src,
 		"powerups.add_item(FRENZY, 3)",
 		[[powerups.add_item(FRENZY, 3)
-	print(CAMO)
-	powerups.add_item(CAMO, 6)]]
+	powerups.add_item(MOUNTAINVPN, 6)]]
 	)
 	print("\n" .. src)
 	return src
@@ -36,7 +35,7 @@ GDPatch.patch_script_as_text("scenes/ui/profile_stats_menu.gdc", function(_ctx, 
 		src,
 		'["frenzy.exe", "frenzy_files_opened", preload("res://assets/icons/damage file-export.png"), "named"], ',
 		[[ ["frenzy.exe", "frenzy_files_opened", preload("res://assets/icons/damage file-export.png"), "named"],
-	["camo.exe", "camo_files_opened", preload("res://assets/icons/damage file-export.png"), "named"],]]
+	["mountainvpn.exe", "mountainvpn_files_opened", preload("res://assets/icons/damage file-export.png"), "named"],]]
 	)
 
 	return src
@@ -47,7 +46,7 @@ GDPatch.patch_script_as_text("scenes/autoload/stat_tracker.gdc", function(_ctx, 
 		src,
 		'"frenzy": "frenzy_files_opened", ',
 		[["frenzy": "frenzy_files_opened",
-	"camo": "camo_files_opened",]]
+	"mountainvpn": "mountainvpn_files_opened",]]
 	)
 
 	return src
