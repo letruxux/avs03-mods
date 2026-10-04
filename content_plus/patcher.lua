@@ -26,7 +26,6 @@ GDPatch.patch_script_as_text("scenes/manager/round_manager/round_manager.gdc", f
 		[[powerups.add_item(FRENZY, 3)
 	powerups.add_item(MOUNTAINVPN, 6)]]
 	)
-	print("\n" .. src)
 	return src
 end)
 
@@ -51,5 +50,3 @@ GDPatch.patch_script_as_text("scenes/autoload/stat_tracker.gdc", function(_ctx, 
 
 	return src
 end)
-
-print("e il gioco è fatto")
