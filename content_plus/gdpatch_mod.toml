@@ -1,0 +1,8 @@
+id = "content_plus"
+
+[meta]
+name = "Content+"
+version = "1.0.0"
+authors = ["letruxux"]
+description = "More Content"
+website = "https://github.com/letruxux/avs03-mods"

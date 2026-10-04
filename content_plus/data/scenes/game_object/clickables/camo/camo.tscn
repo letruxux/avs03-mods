@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://dpdyexls5edu4"]
+
+[ext_resource type="PackedScene" uid="uid://ylvu7vosfdnq" path="res://scenes/game_object/folder/folder.tscn" id="1_jygqr"]
+[ext_resource type="Script" uid="uid://d31cpg5c3wpa5" path="res://scenes/game_object/clickables/camo/camo.gd" id="2_xguca"]
+[ext_resource type="Texture2D" uid="uid://4rf0aemkks31" path="res://assets/icons/damage file-export.png" id="3_rms0h"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qidsn"]
+size = Vector2(24, 30)
+
+[node name="Camo" unique_id=2136486470 instance=ExtResource("1_jygqr")]
+script = ExtResource("2_xguca")
+_folder_name = "camo.exe"
+minimap_category = 2
+
+[node name="Sprite2D" parent="." index="0" unique_id=1069700875]
+texture = ExtResource("3_rms0h")
+
+[node name="CollisionShape2D" parent="Area2D" parent_id_path=PackedInt32Array(813057762) index="0" unique_id=1775906203]
+position = Vector2(1, 0)
+shape = SubResource("RectangleShape2D_qidsn")
+
+[node name="Timer" type="Timer" parent="." index="7" unique_id=710886367]
+process_mode = 1
+wait_time = 10.0
+one_shot = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
