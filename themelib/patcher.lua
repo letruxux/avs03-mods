@@ -13,7 +13,11 @@ function utils.replace(src, a, b)
 end
 
 local function patch_themes(src)
-	local replacement = [[var theme_manifest: ManifestResource = load(THEMES_MANIFEST) as ManifestResource
+	src = utils.replace(
+		src,
+		[[var theme_manifest: ManifestResource = load(THEMES_MANIFEST) as ManifestResource
+	if theme_manifest != null:]],
+		[[var theme_manifest: ManifestResource = load(THEMES_MANIFEST) as ManifestResource
 	if theme_manifest != null:
 		var custom_themes_loaded := 0
 		var dir := DirAccess.open("res://resources/themes")
@@ -30,14 +34,6 @@ local function patch_themes(src)
 					custom_themes_loaded += 1
 			print("[ThemeLib] Loaded %d custom themes" % custom_themes_loaded)
 ]]
-
-	src = src:gsub(
-		utils.escape([[var theme_manifest: ManifestResource = load(THEMES_MANIFEST) as ManifestResource
-	if theme_manifest != null:]]),
-		function()
-			return replacement
-		end,
-		1
 	)
 
 	return src
@@ -109,20 +105,6 @@ const CUSTOM_WALLPAPERS_DIR: String = "res://assets/custom_wallpapers"]]
 	)
 
 	return src
-end
-
-if GDPatch.get_config_option(nil, "enable", "wallpapers") then
-	GDPatch.patch_script_as_text("scenes/ui/personalise/personalise_menu.gdc", function(_ctx, src)
-		src = utils.replace(
-			src,
-			"wallpaper_preview.texture = definition.texture",
-			[[wallpaper_preview.texture = definition.texture
-	wallpaper_preview.stretch_mode = TextureRect.StretchMode.STRETCH_SCALE
-	wallpaper_preview.expand_mode = TextureRect.ExpandMode.EXPAND_FIT_WIDTH]]
-		)
-
-		return src
-	end)
 end
 
 --- um
