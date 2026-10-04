@@ -5,4 +5,5 @@
 ## Install
 
 1. Install [GDPatch](https://gdpatch.dev/using/install/)
-2. In releases, download the mod you want and extract it to `{GAME_FOLDER}/GDPatch/mods`
+2. Download the entire repo [here](https://github.com/letruxux/avs03-mods/archive/refs/heads/main.zip)
+3. Extract the mod you want from the .zip to `{GAME_FOLDER}/GDPatch/mods`
